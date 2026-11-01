@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Atheon Location, a Chrome extension for customizing browser location, time zone, and locale.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#111111">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy Policy — Atheon Location</title>
+  <style>
+    :root {color-scheme:dark;--bg:#101010;--panel:#1b1b1b;--border:#343434;--text:#f3f3f3;--muted:#b6b6b6;--accent:#ff6600;}
+    * {box-sizing:border-box}
+    html {scroll-behavior:smooth}
+    body {margin:0;background:var(--bg);color:var(--text);font:16px/1.72 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+    a {color:#ff8c41;text-underline-offset:3px}
+    a:hover {color:#ffad76}
+    .wrapper {max-width:910px;margin:auto;padding:30px 24px 100px}
+    header {display:flex;align-items:center;gap:15px;padding-bottom:30px;border-bottom:1px solid var(--border)}
+    .brand-icon {width:46px;height:46px;flex:none}
+    .brand-name {font-weight:800;font-size:24px;letter-spacing:.11em;line-height:1.12}
+    .brand-subtitle {display:block;color:var(--accent);letter-spacing:.27em;font-size:12px;font-weight:800;margin-top:5px}
+    .hero {padding:58px 0 35px}
+    .eyebrow {font-size:12px;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+    h1 {font-size:clamp(2.2rem,7vw,4rem);line-height:1.12;letter-spacing:-.042em;margin:10px 0 16px}
+    .intro {font-size:clamp(1.05rem,2.5vw,1.26rem);color:#dadada;max-width:690px;margin:0 0 18px}
+    .updated {font-size:13px;color:var(--muted);margin:0}
+    .summary {background:linear-gradient(135deg,#271b15,#191919 75%);border:1px solid #65361c;border-radius:16px;padding:26px;margin:24px 0 38px}
+    .summary .tag {color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .summary h2 {font-size:23px;margin:8px 0 8px}
+    .summary p {margin:0;color:#e8e8e8}
+    main section {padding:24px 0;border-top:1px solid var(--border)}
+    main h2 {font-size:22px;line-height:1.35;margin:0 0 14px;letter-spacing:-.015em}
+    p,li {color:#d2d2d2}
+    p {margin:10px 0}
+    ul {padding-left:24px}
+    li {padding:3px 0}
+    code {font-size:.93em;color:#efefef;background:#272727;padding:.12em .36em;border-radius:4px;overflow-wrap:anywhere}
+    footer {margin-top:32px;padding-top:22px;border-top:1px solid var(--border);font-size:13px;color:var(--muted)}
+    @media(max-width:520px){.wrapper{padding:20px 18px 60px}.hero{padding:38px 0 28px}.brand-icon{width:39px;height:39px}.brand-name{font-size:21px}.summary{padding:20px}main section{padding:21px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header aria-label="Atheon Location">
+      <img class="brand-icon" src="assets/mark.svg" width="46" height="46" alt="Atheon logo">
+      <div><span class="brand-name">ATHEON</span><span class="brand-subtitle">LOCATION</span></div>
+    </header>
+    <div class="hero">
+      <div class="eyebrow">Atheon Location · Chrome Extension</div>
+      <h1>Privacy Policy</h1>
+      <p class="intro">Your browser location, your choice. Here is how Atheon Location handles location settings, local data, and optional IP-based lookups.</p>
+      <p class="updated">Publisher: Atheon &nbsp;·&nbsp; Last updated: November 2, 2026</p>
+    </div>
+    <div class="summary" aria-label="Privacy summary">
+      <span class="tag">Privacy at a glance</span>
+      <h2>Local-first, without analytics or advertising trackers.</h2>
+      <p>Atheon Location stores your settings locally in Chrome, does not require an account, and does not sell user data. If you choose “Match Browser to IP,” the extension contacts the third-party GeoJS service to look up an approximate location for your public IP address. That provider can see the IP address making the request.</p>
+    </div>
+    <main>
+      <section><h2>1. Purpose and scope</h2>
+        <p>Atheon Location is a Chrome extension for selecting browser-reported geolocation, time zone, and locale. You can select a built-in city, enter coordinates, or align settings with the approximate location of your public IP. The optional Live Verify feature checks which settings have been applied and, when permitted, what the current tab reports.</p>
+      </section>
+      <section><h2>2. Information processed and stored</h2>
+        <ul>
+          <li><strong>Selected location settings:</strong> coordinates, time zone, locale, accuracy, favorites, saved presets, and extension interface preferences can be saved locally using <code>chrome.storage.local</code>.</li>
+          <li><strong>Temporary connection and verification state:</strong> session-only data about connected tabs and whether Chrome acknowledged a location override can be stored using <code>chrome.storage.session</code>.</li>
+          <li><strong>Current-tab verification:</strong> when you select Verify, the extension inspects time zone, regional formatting, geolocation permission, and, if the website has permission, the geolocation value reported by the current tab. These results are used locally to display status.</li>
+        </ul>
+        <p>Atheon Location does not operate its own collection server and does not intentionally collect passwords, payment information, messages, cookies, or browsing history. It does not use analytics or advertising trackers.</p>
+      </section>
+      <section><h2>3. Optional “Match Browser to IP” lookup</h2>
+        <p>If you choose “Match Browser to IP” or “Refresh from IP,” the extension requests optional permission to contact <a href="https://get.geojs.io/" rel="noopener noreferrer">GeoJS</a> and, after you grant it, sends an HTTPS request to <code>https://get.geojs.io/v1/ip/geo.json</code>.</p>
+        <p>GeoJS uses the public IP address associated with that request to return an approximate location such as country, region, city, geographic coordinates, and time zone. The extension uses these values to populate its browser location settings. It does not store the public IP returned by GeoJS. The third-party service can observe the source IP address, and its own processing and retention practices are outside Atheon's control.</p>
+        <p>Using this feature does <strong>not</strong> change your public IP address, VPN, or proxy routing.</p>
+      </section>
+      <section><h2>4. Chrome permissions and debugging notice</h2>
+        <ul>
+          <li><code>debugger</code> applies browser-level overrides using the Chrome DevTools Protocol; Live Verify uses it to inspect the relevant current-tab API results. Chrome may display its standard debugging security notice while the extension is active.</li>
+          <li><code>webNavigation</code> helps reapply selected overrides after top-level page navigation; the extension does not maintain a browsing-history database.</li>
+          <li><code>storage</code> saves settings and short-lived session state in Chrome.</li>
+          <li>Optional access to <code>https://get.geojs.io/*</code> is requested for the user-initiated IP location feature.</li>
+        </ul>
+        <p>Website geolocation requests remain subject to Chrome's individual site permissions. The extension does not automatically authorize location access for websites.</p>
+      </section>
+      <section><h2>5. Sharing, retention, and user control</h2>
+        <p>Atheon does not sell user data or transmit saved location presets or verification results to its own servers. The GeoJS request described above is the optional third-party network operation used to provide IP-based lookup. A visited website may separately receive simulated browser location values if it requests them and receives the necessary site permissions; the website's own privacy practices apply to its handling of data.</p>
+        <p>Saved extension preferences remain in Chrome's local extension storage until changed, cleared, or removed by the user. Temporary session state is cleared as Chrome's extension session data expires. Browser-level backup or synchronization controlled by Chrome is outside this extension's control.</p>
+      </section>
+      <section><h2>6. Remote code and security</h2>
+        <p>The extension's JavaScript, HTML, CSS, and built-in location presets are included in the installed package. GeoJS returns location data, not executable code. Atheon Location does not download or execute remote application code for this feature.</p>
+      </section>
+      <section><h2>7. Changes to this policy</h2>
+        <p>This policy may be updated if the extension's functionality or data practices change. Material changes will be reflected on this page with an updated revision date, and any necessary disclosures will be made through the extension and Chrome Web Store listing.</p>
+      </section>
+    </main>
+    <footer>© 2026 Atheon · Atheon Location · Privacy Policy</footer>
+  </div>
+</body>
+</html>
