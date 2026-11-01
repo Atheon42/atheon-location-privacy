@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1400 1140 980 980" role="img" aria-label="Atheon Location">
+  <path
+    d="M1856 1241 L1464 2034 L1635 2025 L1888 1512 L2144 2025 L2310 2036 L1923 1244 Z"
+    fill="#111111"
+    stroke="#FFFFFF"
+    stroke-width="16"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    paint-order="stroke"/>
+  <circle
+    cx="1887.5"
+    cy="1884.8"
+    r="82"
+    fill="#FF6600"
+    stroke="#FFFFFF"
+    stroke-width="16"
+    paint-order="stroke"/>
+</svg>
